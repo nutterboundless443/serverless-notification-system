@@ -21,7 +21,7 @@ module.exports.sendNotification = async (event) => {
     // Send notification
     const messageParams = {
         Message: message,
-        TopicArn: `arn:aws:sns:us-east-1:your_account_id:${channel}`
+        TopicArn: `arn:aws:sns:us-east-1:${process.env.AWS_ACCOUNT_ID}:${channel}`
     };
     await sns.publish(messageParams).promise();
 
