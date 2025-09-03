@@ -1,0 +1,14 @@
+{
+  "name": "serverless-notification-system",
+  "version": "1.0.0",
+  "description": "无服务器通知系统",
+  "main": "handler.js",
+  "scripts": {
+    "deploy": "serverless deploy",
+    "invoke": "serverless invoke -f sendNotification",
+    "logs": "serverless logs -f sendNotification"
+  },
+  "dependencies": {
+    "aws-sdk": ^2.1032.0
+  }
+}
