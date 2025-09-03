@@ -1,7 +1,7 @@
 {
   "name": "serverless-notification-system",
   "version": "1.0.0",
-  "description": "无服务器通知系统",
+  "description": "Serverless Notification System",
   "main": "handler.js",
   "scripts": {
     "deploy": "serverless deploy",
