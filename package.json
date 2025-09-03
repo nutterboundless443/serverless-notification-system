@@ -9,6 +9,6 @@
     "logs": "serverless logs -f sendNotification"
   },
   "dependencies": {
-    "aws-sdk": "^2.1032.0"
+    "aws-sdk": "^2.1234.0"
   }
 }
