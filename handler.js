@@ -6,7 +6,7 @@ module.exports.sendNotification = async (event) => {
     const body = JSON.parse(event.body);
     const { userId, message, channel } = body;
 
-    // 保存通知到 DynamoDB
+    // Save notification to DynamoDB
     const params = {
         TableName: 'Notifications',
         Item: {
@@ -18,7 +18,7 @@ module.exports.sendNotification = async (event) => {
     };
     await dynamoDB.put(params).promise();
 
-    // 发送通知
+    // Send notification
     const messageParams = {
         Message: message,
         TopicArn: `arn:aws:sns:us-east-1:your_account_id:${channel}`
@@ -27,6 +27,6 @@ module.exports.sendNotification = async (event) => {
 
     return {
         statusCode: 200,
-        body: JSON.stringify({ message: '通知已发送！' })
+        body: JSON.stringify({ message: 'Notification sent!' })
     };
 };
